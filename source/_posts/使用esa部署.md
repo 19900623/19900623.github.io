@@ -6,7 +6,7 @@ tags:
 先在github 正个github.io
 用action
 
-
+```javascript
 esa.jsonc
 
 {
@@ -18,9 +18,10 @@ esa.jsonc
     "notFoundStrategy": "singlePageApplication"
   }
 }
-
+```
  workflow   page.yml
 
+```javascript
 name: Pages
 
 on:
@@ -71,4 +72,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
+```
