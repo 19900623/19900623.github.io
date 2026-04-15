@@ -1,7 +1,7 @@
 #------------------------
 # Header config
-title: theme-kaze demo
-author: theme-kaze
+title: 19900623@qq.com
+author: add
 logo_img: /img/Kaze.png # 将logo放入 ${blog_path}/source/img/${picname}.png 或使用url地址
 author_img: /img/Kaze.png
 author_description: designed by theme-kaze
@@ -9,12 +9,12 @@ author_description: designed by theme-kaze
 # Navbar config
 #------------------------
 menus:
-  home: /
-  archive: /archives
-  tags: /tags
-  categories: /categories
-  about: /about
-  friends: /links
+  首页: /
+  归档: /archives
+  标签: /tags
+  分类: /categories
+  关于: /about
+  朋友: /links
 
 about:
   description: description
