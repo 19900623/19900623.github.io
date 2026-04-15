@@ -2,7 +2,7 @@
 # Header config
 title: theme-kaze demo
 author: theme-kaze
-logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+logo_img: /img/Kaze.png # 将logo放入 ${blog_path}/source/img/${picname}.png 或使用url地址
 author_img: /img/Kaze.png
 author_description: designed by theme-kaze
 #------------------------
@@ -30,10 +30,10 @@ links:
   #   avatar:
   #   description:
   #------------------------
-  # tip: if you want to use QQ avatar without giving away your QQ number,
-  # you can use this api to get an encrypted url:
+  # 提示：如果你想使用QQ头像但又不想泄露QQ号码，
+  # 你可以使用这个API获取加密后的链接：
   # https://ptlogin2.qq.com/getface?appid=1006102&imgtype=3&uin=${yourQQNumber}
-  # and use the encrypted url in the json
+  # 然后将加密后的链接填入json中
   #------------------------
 
 #------------------------
@@ -46,50 +46,50 @@ toc:
 
 copyright:
   enable: true
-  writer: # if writer is empty we will use config.author as writer
+  writer: # 如果作者为空，我们将使用 config.author 作为作者
   declare: 本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！
-  style: warning # the style uses note warning | danger | primary | info | success
+  style: warning # 样式使用 note warning | danger | primary | info | success
 #------------------------
 # Footer
 #------------------------
 footer:
   copyYear: 2020
-  # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
+  # 如果 showPoweredBy 为 true，页脚将显示 'Powered by Hexo'
   showPoweredBy: true
-  # if showThemeName is ture, 'Theme - Kaze' will be seen on the footer
+  # 如果 showThemeName 为 true，页脚将显示 'Theme - Kaze'
   showThemeName: true
   #------------------------
   # Record config
-  # please put the gov image in ${yoursite}/img/beian.png
-  RecordInfo: "" # your Record info such as '某ICP备xxx号'
-  govRecordInfo: "" # your gov record info such as '某公网安备xxx号'
-  govRecordUrl: "" # your gov record url
+  # 请将备案图片放入 ${yoursite}/img/beian.png
+  RecordInfo: "" # 你的备案信息，例如 '某ICP备xxx号'
+  govRecordInfo: "" # 你的公安备案信息，例如 '某公网安备xxx号'
+  govRecordUrl: "" # 你的公安备案链接
   #------------------------
-  # pv / uv statistics config
+  # pv / uv 统计配置
   #------------------------
   statistics:
     enable: false
-    type: busuanzi # now version only supports busuanzi
+    type: busuanzi # 当前版本仅支持 busuanzi
     pv:
       enable: true
-      style: 本站总访问量{}次 # the style will be shown as $1{pv}$2
+      style: 本站总访问量{}次 # 样式将显示为 $1{pv}$2
     uv:
       enable: true
-      style: 本站总访客数{}次 # the style will be shown as $1{uv}$2
+      style: 本站总访客数{}次 # 样式将显示为 $1{uv}$2
 
 #------------------------
-# animation config
+# 动画配置
 #------------------------
-# if scrollUpAnimation is true, there will be scroll-up animation.
+# 如果 scrollUpAnimation 为 true，将会有回到顶部的动画效果。
 scrollUpAnimation: true
 
 #------------------------
-# comment config
+# 评论配置
 #------------------------
 comment:
   enable: false
   type: valine # valine | gitalk | livere | disqus | we recommend valine
-  # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+  # gitalk 配置详情可见 https://github.com/gitalk/gitalk/blob/master/readme-cn.md
   valine:
     appId:
     appKey:
@@ -120,37 +120,37 @@ comment:
     uid:
 
 #------------------------
-# latex config
+# latex 配置
 #------------------------
-# choose true to use latex by mathjax or katex
-# warning: latex rendering will put lots of loading burden on page loading
+# 选择 true 以使用 mathjax 或 katex 渲染 latex
+# 警告：latex 渲染会增加页面加载负担
 latex:
   enable: false
   engine: mathjax # mathjax | katex
-  # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
-  # so you can use hexo-renderer-kramed
-  # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
+  # 为了获得更好的渲染效果，当你选择 mathjax 时，你可以直接使用它，但会失去一些效果
+  # 所以你可以使用 hexo-renderer-kramed
+  # 当你选择 katex 时，你必须使用 hexo-renderer-markdown-it-plus 或其他渲染引擎
   global: false
-  # when you choose false, you can use latex by `latex: true` in post front-matter
+  # 当你选择 false 时，你可以通过在文章 Front-matter 中设置 `latex: true` 来使用 latex
 
 #------------------------
-# lazyload config
+# 懒加载配置
 #------------------------
 lazyload:
   enable: true
   loadingImg:
 
 #------------------------
-# plugins config
+# 插件配置
 #------------------------
 fslightbox:
   enable: true
-# If your hexo version is below 5.0.0, please upgrade first to use this config
-# we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
+# 如果你的 hexo 版本低于 5.0.0，请先升级以使用此配置
+# 我们支持八种高亮主题，你可以去 prism 网站 (https://prismjs.com) 获取更多信息
 # theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
 prism:
   theme:
-# show the number of words in posts
+# 显示文章字数统计
 wordcount:
   enable: true
 # Analytics config
@@ -158,12 +158,12 @@ analytics:
   enable: false
   type: google # google
   google:
-    id: # you can see more information in https://analytics.google.com/
+    id: # 你可以在此处查看更多信息 https://analytics.google.com/
 #------------------------
-# minify config
-# css minify uses autoprefixer and clean-css
-# javascript minify uses uglify-es
-# html minify uses html-minifier
+# 压缩配置
+# css 压缩使用 autoprefixer 和 clean-css
+# javascript 压缩使用 uglify-es
+# html 压缩使用 html-minifier
 #------------------------
 minify:
   enable: false
@@ -171,10 +171,10 @@ minify:
   js: true
   html: true
 #------------------------
-# theme design config
+# 主题设计配置
 #------------------------
-# the config of theme colors and styles
-# you can modify these presets to design different styles
+# 主题颜色和样式的配置
+# 你可以修改这些预设来设计不同的样式
 color:
   text-color: "#3c4858"
   text-strong-color: "#2f3d4e"
@@ -192,11 +192,11 @@ color:
   code-background-color: "#e9eaf0"
 
 font:
-  font-size: 16px # global font-size
-  font-family: '-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif' # global font-family
+  font-size: 16px # 全局字体大小
+  font-family: '-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif' # 全局字体族
 
 #------------------------
-# cdn config
+# cdn 配置
 #------------------------
 cdn:
   mathjax: //cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
@@ -210,3 +210,5 @@ cdn:
   lozad: /js/lib/lozad.min.js
   prism: /js/lib/prism/
   busuanzi: /js/lib/busuanzi.min.js
+
+
