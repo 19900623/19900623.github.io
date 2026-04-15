@@ -1,20 +1,22 @@
 #------------------------
 # Header config
-title: 19900623@qq.com
-author: add
-logo_img: /img/Kaze.png # 将logo放入 ${blog_path}/source/img/${picname}.png 或使用url地址
-author_img: /img/Kaze.png
+title: Theme Kaze
+author: theme-kaze
+# put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+# logo_img: https://img.songhn.com/img/Y67gdd.png
+author_img: https://img.songhn.com/img/Y67gdd.png
 author_description: designed by theme-kaze
 #------------------------
 # Navbar config
 #------------------------
 menus:
-  首页: /
-  归档: /archives
-  标签: /tags
-  分类: /categories
-  关于: /about
-  朋友: /links
+  home: /
+  archive: /archives
+  tags: /tags
+  categories: /categories
+  about: /about
+  friends: /links
+  # artitalk: /shuoshuo # You can uncomment to add this route
 
 about:
   description: description
@@ -30,10 +32,10 @@ links:
   #   avatar:
   #   description:
   #------------------------
-  # 提示：如果你想使用QQ头像但又不想泄露QQ号码，
-  # 你可以使用这个API获取加密后的链接：
+  # tip: if you want to use QQ avatar without giving away your QQ number,
+  # you can use this api to get an encrypted url:
   # https://ptlogin2.qq.com/getface?appid=1006102&imgtype=3&uin=${yourQQNumber}
-  # 然后将加密后的链接填入json中
+  # and use the encrypted url in the json
   #------------------------
 
 #------------------------
@@ -46,50 +48,67 @@ toc:
 
 copyright:
   enable: true
-  writer: # 如果作者为空，我们将使用 config.author 作为作者
+  writer: # if writer is empty we will use config.author as writer
   declare: 本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！
-  style: warning # 样式使用 note warning | danger | primary | info | success
+  style: warning # the style uses note warning | danger | primary | info | success
+
+search:
+  enable: false
+  path: search.json
+  field: posts
+  searchContent: true
+
+og:
+  enable: true
+  title: true
+  url: true
+  image: true
+  description: true
+  article: true
 #------------------------
 # Footer
 #------------------------
 footer:
   copyYear: 2020
-  # 如果 showPoweredBy 为 true，页脚将显示 'Powered by Hexo'
+  # if showPoweredBy is ture, 'Powered by Hexo' will be seen on the footer
   showPoweredBy: true
-  # 如果 showThemeName 为 true，页脚将显示 'Theme - Kaze'
+  # if showThemeName is ture, 'Theme - Kaze' will be seen on the footer
   showThemeName: true
   #------------------------
   # Record config
-  # 请将备案图片放入 ${yoursite}/img/beian.png
-  RecordInfo: "" # 你的备案信息，例如 '某ICP备xxx号'
-  govRecordInfo: "" # 你的公安备案信息，例如 '某公网安备xxx号'
-  govRecordUrl: "" # 你的公安备案链接
+  # please put the gov image in ${yoursite}/img/beian.png
+  RecordInfo: "" # your Record info such as '某ICP备xxx号'
+  govRecordInfo: "" # your gov record info such as '某公网安备xxx号'
+  govRecordUrl: "" # your gov record url
   #------------------------
-  # pv / uv 统计配置
+  # pv / uv statistics config
   #------------------------
   statistics:
     enable: false
-    type: busuanzi # 当前版本仅支持 busuanzi
+    type: busuanzi # now version only supports busuanzi
     pv:
       enable: true
-      style: 本站总访问量{}次 # 样式将显示为 $1{pv}$2
+      style: 本站总访问量{}次 # the style will be shown as $1{pv}$2
     uv:
       enable: true
-      style: 本站总访客数{}次 # 样式将显示为 $1{uv}$2
+      style: 本站总访客数{}次 # the style will be shown as $1{uv}$2
 
+widgets:
+  showWidgetsMobiles: "none"
 #------------------------
-# 动画配置
+# animation config
 #------------------------
-# 如果 scrollUpAnimation 为 true，将会有回到顶部的动画效果。
+# if scrollUpAnimation is true, there will be scroll-up animation.
 scrollUpAnimation: true
 
 #------------------------
-# 评论配置
+# comment config
 #------------------------
 comment:
   enable: false
-  type: valine # valine | gitalk | livere | disqus | we recommend valine
-  # gitalk 配置详情可见 https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+  type: valine # valine | gitalk | livere | disqus | we recommend valine | waline
+  # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+  # waline config details can see in https://waline.js.org
   valine:
     appId:
     appKey:
@@ -116,41 +135,57 @@ comment:
     distractionFreeMode: false
     # en | zh-CN | zh-TW
     language: navigator.language || navigator.userLanguage
+    labels: ['Gitalk']
+    perPage: 10
   livere:
     uid:
+  waline:
+    serverURL:
+    path: window.location.pathname
+    avatar: mp
+    meta: ["nick", "mail", "link"]
+    requiredMeta: []
+    lang: zh-CN
+    dark: html[data-user-color-scheme="dark"]
+    login: enable
+    wordLimit: 0
+    pageSize: 10
+    locale:
+      placeholder: Just go go
 
 #------------------------
-# latex 配置
+# latex config
 #------------------------
-# 选择 true 以使用 mathjax 或 katex 渲染 latex
-# 警告：latex 渲染会增加页面加载负担
+# choose true to use latex by mathjax or katex
+# warning: latex rendering will put lots of loading burden on page loading
 latex:
   enable: false
   engine: mathjax # mathjax | katex
-  # 为了获得更好的渲染效果，当你选择 mathjax 时，你可以直接使用它，但会失去一些效果
-  # 所以你可以使用 hexo-renderer-kramed
-  # 当你选择 katex 时，你必须使用 hexo-renderer-markdown-it-plus 或其他渲染引擎
+  # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
+  # so you can use hexo-renderer-kramed
+  # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
   global: false
-  # 当你选择 false 时，你可以通过在文章 Front-matter 中设置 `latex: true` 来使用 latex
+  # when you choose false, you can use latex by `latex: true` in post front-matter
 
 #------------------------
-# 懒加载配置
+# lazyload config
 #------------------------
 lazyload:
   enable: true
   loadingImg:
 
 #------------------------
-# 插件配置
+# plugins config
 #------------------------
-fslightbox:
+lightbox:
   enable: true
-# 如果你的 hexo 版本低于 5.0.0，请先升级以使用此配置
-# 我们支持八种高亮主题，你可以去 prism 网站 (https://prismjs.com) 获取更多信息
+# If your hexo version is below 5.0.0, please upgrade first to use this config
+# we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
 # theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
 prism:
-  theme:
-# 显示文章字数统计
+  theme: default
+  darkTheme: tomorrow
+# show the number of words in posts
 wordcount:
   enable: true
 # Analytics config
@@ -158,12 +193,17 @@ analytics:
   enable: false
   type: google # google
   google:
-    id: # 你可以在此处查看更多信息 https://analytics.google.com/
+    id: # you can see more information in https://analytics.google.com/
+# Doc：https://artitalk.js.org/
+artitalk:
+  enable: false
+  appId: 
+  appKey: 
 #------------------------
-# 压缩配置
-# css 压缩使用 autoprefixer 和 clean-css
-# javascript 压缩使用 uglify-es
-# html 压缩使用 html-minifier
+# minify config
+# css minify uses autoprefixer and clean-css
+# javascript minify uses uglify-es
+# html minify uses html-minifier
 #------------------------
 minify:
   enable: false
@@ -171,19 +211,19 @@ minify:
   js: true
   html: true
 #------------------------
-# 主题设计配置
+# theme design config
 #------------------------
-# 主题颜色和样式的配置
-# 你可以修改这些预设来设计不同的样式
+# the config of theme colors and styles
+# you can modify these presets to design different styles
 color:
   text-color: "#3c4858"
   text-strong-color: "#2f3d4e"
-  text-light-color: "#909faf"
+  text-light-color: "#60656a"
   divider-color: "#e6e8ee"
   title-color: "#475b6d"
   link-color: "#3273dc"
   link-hover-color: "#6596e5"
-  info-text-color: "#909faf"
+  info-text-color: "#60656a"
   widget-background-color: "#fff"
   body-background-color: "#f2f5f8"
   border-color: "#e1e4e9"
@@ -192,11 +232,11 @@ color:
   code-background-color: "#e9eaf0"
 
 font:
-  font-size: 16px # 全局字体大小
-  font-family: '-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif' # 全局字体族
+  font-size: 15px # global font-size
+  font-family: '-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif' # global font-family
 
 #------------------------
-# cdn 配置
+# cdn config
 #------------------------
 cdn:
   mathjax: //cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
@@ -206,9 +246,12 @@ cdn:
     js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
   valine: //unpkg.com/valine/dist/Valine.min.js
   livere: //cdn-city.livere.com/js/embed.dist.js
-  fslightbox: //cdn.jsdelivr.net/npm/fslightbox@3.1.0/index.min.js
+  waline: 
+    js: //unpkg.com/@waline/client@v2/dist/waline.js
+    css: //unpkg.com/@waline/client@v2/dist/waline.css
+  baguetteBox: /js/lib/lightbox
   lozad: /js/lib/lozad.min.js
   prism: /js/lib/prism/
   busuanzi: /js/lib/busuanzi.min.js
-
-
+  artitalk: https://cdn.jsdelivr.net/npm/artitalk
+  md5: /js/lib/md5.min.js
