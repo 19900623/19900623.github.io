@@ -2,8 +2,8 @@
 # Header config
 title: 19900623@qq.com
 author: add
-logo_img: /img/Kaze.png # 将logo放入 ${blog_path}/source/img/${picname}.png 或使用url地址
-author_img: /img/Kaze.png
+logo_img: /img/Kaze.jpg # 将logo放入 ${blog_path}/source/img/${picname}.png 或使用url地址
+author_img: /img/Kaze.jpg
 author_description: designed by theme-kaze
 #------------------------
 # Navbar config
