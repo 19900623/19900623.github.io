@@ -9,12 +9,13 @@ author_description: designed by theme-kaze
 # Navbar config
 #------------------------
 menus:
-  首页: /
-  归档: /archives
-  标签: /tags
-  分类: /categories
-  关于: /about
-  朋友: /links
+  home: /
+  archive: /archives
+  tags: /tags
+  categories: /categories
+  about: /about
+  friends: /links
+  # artitalk: /shuoshuo # You can uncomment to add this route
 
 about:
   description: description
@@ -149,7 +150,7 @@ fslightbox:
 # 我们支持八种高亮主题，你可以去 prism 网站 (https://prismjs.com) 获取更多信息
 # theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
 prism:
-  theme:
+  theme: tomorrow
 # 显示文章字数统计
 wordcount:
   enable: true
